@@ -1,1 +1,1 @@
-export const setTasks = tasks => ({type: "GET_TASKS", payload: tasks })
+export const getTasks = tasks => ({type: "GET_TASKS", payload: tasks })
