@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from "react-redux"
 
 class TasksContainer extends React.Component {
   
@@ -13,4 +14,10 @@ class TasksContainer extends React.Component {
   }
 }
 
-export default TasksContainer;
+function mapStateToProps(state){
+  return {
+    tasks: state
+  }
+}
+
+export default connect(mapStateToProps)(TasksContainer);
