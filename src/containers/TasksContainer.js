@@ -5,9 +5,7 @@ import {getTasks} from '../actions/taskActions'
 class TasksContainer extends React.Component {
   
   componentDidMount(){
-    fetch("http://localhost:3000/tasks")
-    .then(response => response.json())
-    .then(data => this.props.dispatchTasks(data))
+    this.props.dispatchTasks()
   }
   
   render() {
@@ -25,7 +23,7 @@ class TasksContainer extends React.Component {
 
 function mapDispatchToProps(dispatch){
   return {
-    dispatchTasks: (tasks) => dispatch(getTasks(tasks))
+    dispatchTasks: () => dispatch(getTasks())
   }
 }
 
