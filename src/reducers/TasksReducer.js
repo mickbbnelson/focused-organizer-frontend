@@ -3,8 +3,8 @@ export default function tasksReducer(state = [], action){
         case 'GET_TASKS':
         return action.payload;
 
-        //case 'ADD_TASK':
-        //return [...state, action.payload]
+        case 'ADD_TASK':
+        return [...state, action.payload]
 
         default:
             return state;
