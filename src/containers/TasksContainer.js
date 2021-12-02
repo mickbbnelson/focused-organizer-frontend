@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
 import {getTasks} from '../actions/taskActions'
+import TaskForm from '../components/TaskForm'
 
 class TasksContainer extends React.Component {
   
@@ -15,6 +16,9 @@ class TasksContainer extends React.Component {
     <div>
       {console.log(this.props.tasks)}
       {this.props.tasks.map((task) => <p key={task.id}>{task.task}</p>)}
+    </div>
+    <div>
+    <TaskForm />
     </div>
     </div>
     );
