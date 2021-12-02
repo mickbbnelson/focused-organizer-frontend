@@ -18,6 +18,6 @@ export const addTask = (task) => {
     return (dispatch) => {
         fetch('http://localhost:3000/tasks', configObject)
         .then(response =>response.json())
-        .then(data => dispatch({type: "ADD_PERSON", payload: task}))
+        .then(data => dispatch({type: "ADD_TASK", payload: data}))
     }
 }
