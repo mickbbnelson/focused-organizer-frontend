@@ -11,13 +11,16 @@ export const addTask = (task) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Accept: 'application/json'
+            "Accept": 'application/json'
         },
         body: JSON.stringify(task)
     }
+
     return (dispatch) => {
         fetch('http://localhost:3000/tasks', configObject)
-        .then(response =>response.json())
+        .then(response => response.json())
         .then(data => dispatch({type: "ADD_TASK", payload: data}))
     }
 }
+
+//dispatch({type: "ADD_TASK", payload: data})

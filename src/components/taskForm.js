@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux"
+import { addTask } from "../actions/taskActions"
 
 class TaskForm extends React.Component {
   state = {
@@ -16,6 +18,7 @@ class TaskForm extends React.Component {
   
   handleSubmit = (event) => {
       event.preventDefault()
+      this.props.dispatchTask(this.state)
       this.setState({
         task: '',
         priority: '',
@@ -44,4 +47,10 @@ class TaskForm extends React.Component {
   }
 }
 
-export default TaskForm;
+function mapDispatchToProps(dispatch){
+    return {
+      dispatchTask: (task) => dispatch(addTask(task))
+    }
+  }
+
+export default connect(null, mapDispatchToProps)(TaskForm);

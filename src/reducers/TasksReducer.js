@@ -4,7 +4,7 @@ export default function tasksReducer(state = [], action){
         return action.payload;
 
         case 'ADD_TASK':
-        return [...state, action.payload]
+        return [...state, action.payload] 
 
         default:
             return state;
