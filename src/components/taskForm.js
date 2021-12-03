@@ -14,11 +14,21 @@ class TaskForm extends React.Component {
     })
   }
   
+  handleSubmit = (event) => {
+      event.preventDefault()
+      this.setState({
+        task: '',
+        priority: '',
+        category: '',
+        notes: ''
+    })
+  }
+
     render() {
     return (
     <div>
         <h1>Add a Task</h1>
-        <form >
+        <form onSubmit={this.handleSubmit}>
             <label htmlFor="task-input">Task:</label>
             <input type="text" name="task" id="task-input" onChange={this.handleChange} value={this.state.task} />
             <label htmlFor="priority-input">Priority:</label>
