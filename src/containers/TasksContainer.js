@@ -2,21 +2,23 @@ import React from "react";
 import {connect} from "react-redux"
 import {getTasks} from '../actions/taskActions'
 import TaskForm from '../components/TaskForm'
+import TaskCard from '../components/TaskCard'
 
 class TasksContainer extends React.Component {
   
   componentDidMount(){
     this.props.dispatchTasks()
   }
-  
+  //<p key={task.id}>{task.task}</p>
   render() {
     return (
     <div>
     <h1>Tasks Container</h1>
     <div>
       {console.log(this.props.tasks)}
-      {this.props.tasks.map((task) => <p key={task.id}>{task.task}</p>)}
+      {this.props.tasks.map((task) => <TaskCard key={task.id} task={task} />)}
     </div>
+
     <div>
     <TaskForm />
     </div>
