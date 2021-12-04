@@ -4,7 +4,10 @@ const TaskCard = (props) => {
     console.log(props)
     return (
         <div>
-            <p>{props.task.task}</p>
+            <p>{props.task.task} - 
+            Priority: {props.task.priority}, 
+            Category: {props.task.category}, 
+            Notes: {props.task.notes} </p>
         </div>
     )
 }
