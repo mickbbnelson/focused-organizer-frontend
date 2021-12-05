@@ -23,4 +23,15 @@ export const addTask = (task) => {
     }
 }
 
-//dispatch({type: "ADD_TASK", payload: data})
+export const deleteTask = (taskId) => {
+    const configObject = {
+        method: "DELETE"
+    }
+
+    return (dispatch) => {
+        fetch(`http://localhost:3000/tasks/${taskId}`, configObject)
+        .then(response => response.json())
+        .then(data => dispatch({type: "DELETE_TASK", payload: data}))
+    }
+
+}
