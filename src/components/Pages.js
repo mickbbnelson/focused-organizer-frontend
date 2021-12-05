@@ -8,9 +8,9 @@ export default function Pages() {
 
     return (
         <Switch>
-            <Route path="/tasks" component={TasksContainer} />
-            <Route path="/calendar" component={CalendarContainer} />
-            <Route path="/" component={Home} />
+            <Route path="/tasks" component={routerProps => <TasksContainer routerProps={routerProps} />} />
+            <Route path="/calendar" component={routerProps => <CalendarContainer routerProps={routerProps} />} />
+            <Route path="/" component={routerProps => <Home routerProps={routerProps} />} />
         </Switch>
     )
 }
