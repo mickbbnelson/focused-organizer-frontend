@@ -1,4 +1,7 @@
 import React from 'react';
+import connect from 'react-redux'
+import { deleteTask } from '../actions/taskActions'
+
 
 const TaskCard = (props) => {
     console.log(props)
@@ -12,4 +15,10 @@ const TaskCard = (props) => {
     )
 }
 
-export default TaskCard;
+function mapDispatchToProps(dispatch){
+    return {
+        deleteTask: (id) => dispatch(deleteTask(id))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TaskCard);

@@ -33,5 +33,4 @@ export const deleteTask = (taskId) => {
         .then(response => response.json())
         .then(data => dispatch({type: "DELETE_TASK", payload: data}))
     }
-
 }
