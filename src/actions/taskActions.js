@@ -1,10 +1,11 @@
 const GET_TASKS = "GET_TASKS"
 const ADD_TASK = "ADD_TASK"
 const DELETE_TASK = "DELETE_TASK"
+const BASE_URL = "http://localhost:3000/tasks/"
 
 export const getTasks = () => {
     return (dispatch) => {          //dispatch comes from thunk middleware
-        fetch('http://localhost:3000/tasks')
+        fetch(BASE_URL)
         .then(response => response.json())
         .then(data => dispatch({type: GET_TASKS, payload: data}))
 }}
@@ -21,7 +22,7 @@ export const addTask = (task) => {
     }
 
     return (dispatch) => {
-        fetch('http://localhost:3000/tasks', configObject)
+        fetch(BASE_URL, configObject)
         .then(response => response.json())
         .then(data => dispatch({type: ADD_TASK, payload: data}))
     }
@@ -33,7 +34,7 @@ export const deleteTask = (taskId) => {
     }
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/tasks/${taskId}`, configObject)
+        fetch(BASE_URL + taskId, configObject)
         .then(response => response.json())
         .then(data => dispatch({type: DELETE_TASK, payload: data}))
     }

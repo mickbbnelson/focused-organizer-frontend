@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { deleteTask } from '../actions/taskActions'
+import { deleteTask } from '../actions/TaskActions'
 
 const TaskCard = (props) => {
     console.log(props)

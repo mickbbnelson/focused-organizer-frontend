@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux"
-import {getTasks} from '../actions/taskActions'
+import {getTasks} from '../actions/TaskActions'
 import TaskForm from '../components/TaskForm'
 import TaskCard from '../components/TaskCard'
 

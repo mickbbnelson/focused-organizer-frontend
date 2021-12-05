@@ -1,4 +1,4 @@
-export default function tasksReducer(state = [], action){
+export default function TasksReducer(state = [], action){
     switch (action.type) {
         case 'GET_TASKS':
         return action.payload;
