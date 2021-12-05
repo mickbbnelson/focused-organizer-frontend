@@ -6,7 +6,7 @@ export default function tasksReducer(state = [], action){
         case 'ADD_TASK':
         return [...state, action.payload]; 
 
-        case "DELETE_TASK":
+        case 'DELETE_TASK':
         const newArray = state.filter((task) => task.id !== action.payload)
         return newArray;
 
