@@ -10,6 +10,14 @@ export default function TasksReducer(state = [], action){
         const newArray = state.filter((task) => task.id !== action.payload)
         return newArray;
 
+        case 'EDIT_TASK':
+        const index = state.findIndex(task => task.id === action.payload.id)
+
+        return [...state.slice(0, index),
+            action.payload,
+            ...state.slice(index + 1)
+        ];
+
         default:
             return state;
     }
