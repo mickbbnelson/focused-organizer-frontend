@@ -1,23 +1,28 @@
 import React from 'react';
-import connect from 'react-redux'
+import { connect } from 'react-redux'
 import { deleteTask } from '../actions/taskActions'
-
 
 const TaskCard = (props) => {
     console.log(props)
+    
+    function handleClick(){
+        props.dispatchDelete(props.task.id)
+    }
+
     return (
         <div>
-            <p>{props.task.task} - 
+            <span>{props.task.task} - 
             Priority: {props.task.priority}, 
             Category: {props.task.category}, 
-            Notes: {props.task.notes} </p>
+            Notes: {props.task.notes} </span>
+            <button onClick={handleClick}>Delete</button>
         </div>
     )
 }
 
 function mapDispatchToProps(dispatch){
     return {
-        deleteTask: (id) => dispatch(deleteTask(id))
+        dispatchDelete: (id) => dispatch(deleteTask(id))
     }
 }
 
