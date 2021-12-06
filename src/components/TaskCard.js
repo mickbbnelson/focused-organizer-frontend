@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { deleteTask } from '../actions/TaskActions'
+import { NavLink } from 'react-router-dom'
 
 const TaskCard = (props) => {
     console.log(props)
     
     function handleClick(){
         props.dispatchDelete(props.task.id)
+    }
+
+    function handleEdit(){
+
     }
 
     return (
@@ -16,7 +21,7 @@ const TaskCard = (props) => {
             Category: {props.task.category}, 
             Notes: {props.task.notes} </span>
             <button onClick={handleClick}>Delete</button>
-            <button>Edit</button>
+            <button onClick={handleEdit}>Edit</button>
         </div>
     )
 }
