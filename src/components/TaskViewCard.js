@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux"
+import EditTaskForm from "./EditTaskForm"
 
 class TaskViewCard extends React.Component {
     constructor(props){
@@ -22,9 +23,12 @@ class TaskViewCard extends React.Component {
         console.log(this.props.routerProps.match.params.id)
         return (
             <div>
-            <h1>Task Info</h1> 
-            <h2></h2>   
-            </div>   
+            <h1>{this.state.task}</h1> 
+            <p>Priority: {this.state.priority}</p> 
+            <p>Category: {this.state.category}</p> 
+            <p>Notes: {this.state.notes}</p> 
+            <EditTaskForm />
+            </div>  
         )
     }
 }
