@@ -27,7 +27,7 @@ class EditTaskForm extends React.Component {
             <label htmlFor="notes-update">Notes:</label>
             <input type="text" name="notes" id="notes-update" onChange={this.handleChange} />
 
-            <input type="submit" value="Add Task"/>
+            <input type="submit" value="Edit Task"/>
         </form>
         </div>
         )
