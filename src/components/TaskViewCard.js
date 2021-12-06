@@ -19,15 +19,13 @@ class TaskViewCard extends React.Component {
 }
 
     render(){
-        console.log(this.props.tasks)
-        console.log(this.props.routerProps.match.params.id)
         return (
             <div>
             <h1>{this.state.task}</h1> 
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 
-            <EditTaskForm />
+            <EditTaskForm task={this.state.task} priority={this.state.priority} category={this.state.category} notes={this.state.notes} />
             </div>  
         )
     }
