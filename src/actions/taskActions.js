@@ -42,6 +42,7 @@ export const deleteTask = (taskId) => {
 }
 
 export const updateTask = (task) => {
+    console.log(task)
     const configObject = {
         method: "PATCH",
         headers: {

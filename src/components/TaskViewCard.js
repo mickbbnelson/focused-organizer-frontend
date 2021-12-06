@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux"
 import EditTaskForm from "./EditTaskForm"
 
+
 class TaskViewCard extends React.Component {
     constructor(props){
     super(props)
@@ -12,11 +13,13 @@ class TaskViewCard extends React.Component {
         task: foundTask.task,
         priority: foundTask.priority,
         category: foundTask.category,
-        notes: foundTask.notes
+        notes: foundTask.notes,
+        id: foundTask.id
     }
     
     console.log(this.state)
-}
+    }
+
 
     render(){
         return (
@@ -25,7 +28,7 @@ class TaskViewCard extends React.Component {
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 
-            <EditTaskForm task={this.state.task} priority={this.state.priority} category={this.state.category} notes={this.state.notes} />
+            <EditTaskForm task={this.state.task} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} />
             </div>  
         )
     }

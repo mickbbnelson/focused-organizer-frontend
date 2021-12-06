@@ -1,11 +1,14 @@
 import React from "react";
+import { updateTask } from '../actions/TaskActions'
+import { connect } from "react-redux"
 
 class EditTaskForm extends React.Component {
     state = {
         task: this.props.task,
         priority: this.props.priority,
         category: this.props.category,
-        notes: this.props.notes
+        notes: this.props.notes,
+        id: this.props.id
     }
 
     handleChange = (event) => {
@@ -14,12 +17,17 @@ class EditTaskForm extends React.Component {
         })
       }
 
+    handleUpdate = (event) => {
+        event.preventDefault();
+        this.props.dispatchUpdate(this.state)
+    } 
+
     render(){
         console.log(this.props)
         return (
         <div>
         <h1>Edit Task</h1>
-        <form>
+        <form onSubmit={this.handleUpdate}>
             <label htmlFor="task-update">Task:</label>
             <input type="text" name="task" id="task-update" onChange={this.handleChange} value={this.state.task}/>
             
@@ -47,4 +55,12 @@ class EditTaskForm extends React.Component {
     }
 }
 
-export default EditTaskForm
+function mapDispatchToProps(dispatch){
+    return {
+        dispatchUpdate: (task) => {
+            console.log(task.id)
+            dispatch(updateTask(task))
+    }}
+}
+
+export default connect (null, mapDispatchToProps)(EditTaskForm)
