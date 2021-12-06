@@ -10,21 +10,14 @@ const TaskCard = (props) => {
         props.dispatchDelete(props.task.id)
     }
 
-    function handleEdit(){
-
-    }
-
-    const editLink = `/tasks/${props.task.id}/edit`
+    const viewLink = `/tasks/${props.task.id}`
 
     return (
         <div>
-            <span>{props.task.task} - 
-            Priority: {props.task.priority}, 
-            Category: {props.task.category}, 
-            Notes: {props.task.notes} </span>
+            <span>{props.task.task}</span>
             <button onClick={handleClick}>Delete</button>
-            <Link to={editLink} >
-            <button onClick={handleEdit}>Edit</button>
+            <Link to={viewLink} >
+            <button>View</button>
             </Link>
         </div>
     )

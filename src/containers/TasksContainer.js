@@ -3,6 +3,8 @@ import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
 import TaskForm from '../components/TaskForm'
 import TaskCard from '../components/TaskCard'
+//import { Route, Switch } from 'react-router-dom'
+//import TaskViewCard from '../components/TaskViewCard'
 
 class TasksContainer extends React.Component {
   
@@ -18,7 +20,6 @@ class TasksContainer extends React.Component {
       {console.log(this.props.tasks)}
       {this.props.tasks.map((task) => <TaskCard key={task.id} task={task} />)}
     </div>
-
     <div>
     <TaskForm />
     </div>

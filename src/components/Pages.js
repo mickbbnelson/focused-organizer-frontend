@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import TasksContainer from '../containers/TasksContainer';
 import CalendarContainer from '../containers/CalendarContainer';
 import Home from './Home'
-import EditTaskForm from './EditTaskForm'
+import TaskViewCard from './TaskViewCard'
 
 export default function Pages() {
 
@@ -11,8 +11,8 @@ export default function Pages() {
         <Switch>
             <Route exact path="/tasks" component={routerProps => <TasksContainer routerProps={routerProps} />} />
             <Route path="/calendar" component={routerProps => <CalendarContainer routerProps={routerProps} />} />
-            <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} />} />
-            <Route path="/" component={routerProps => <Home routerProps={routerProps} />} />
+            <Route path="/tasks/:id" component={routerProps => <TaskViewCard routerProps={routerProps} />} />
+            <Route exact path="/" component={routerProps => <Home routerProps={routerProps} />} />
         </Switch>
     )
 }
