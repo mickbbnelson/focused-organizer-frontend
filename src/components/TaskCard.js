@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { deleteTask } from '../actions/TaskActions'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const TaskCard = (props) => {
     console.log(props)
@@ -14,6 +14,8 @@ const TaskCard = (props) => {
 
     }
 
+    const editLink = `/tasks/${props.task.id}/edit`
+
     return (
         <div>
             <span>{props.task.task} - 
@@ -21,7 +23,9 @@ const TaskCard = (props) => {
             Category: {props.task.category}, 
             Notes: {props.task.notes} </span>
             <button onClick={handleClick}>Delete</button>
+            <Link to={editLink} >
             <button onClick={handleEdit}>Edit</button>
+            </Link>
         </div>
     )
 }
