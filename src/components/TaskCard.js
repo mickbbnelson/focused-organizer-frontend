@@ -16,6 +16,7 @@ const TaskCard = (props) => {
             Category: {props.task.category}, 
             Notes: {props.task.notes} </span>
             <button onClick={handleClick}>Delete</button>
+            <button>Edit</button>
         </div>
     )
 }

@@ -9,7 +9,7 @@ class TasksContainer extends React.Component {
   componentDidMount(){
     this.props.dispatchTasks()
   }
-  //<p key={task.id}>{task.task}</p>
+  
   render() {
     return (
     <div>
