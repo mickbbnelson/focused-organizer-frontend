@@ -3,8 +3,6 @@ import { connect } from "react-redux"
 import EditTaskForm from "./EditTaskForm"
 import { Switch, Route, Link } from 'react-router-dom';
 import { updateTask } from '../actions/TaskActions'
-import TasksContainer from "../containers/TasksContainer"
-
 
 class TaskViewCard extends React.Component {
     constructor(props){

@@ -5,7 +5,7 @@ export default function NavBar() {
 
     return (
         <div>
-            <NavLink to='tasks'>Tasks</NavLink>
+            <NavLink to='/tasks'>Tasks</NavLink>
             <NavLink to='calendar'>Calendar</NavLink>
             <NavLink to='/'>Home</NavLink>
         </div>
