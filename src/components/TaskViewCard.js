@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux"
 import EditTaskForm from "./EditTaskForm"
 import { Switch, Route, Link } from 'react-router-dom';
+import { updateTask } from '../actions/TaskActions'
 
 
 class TaskViewCard extends React.Component {
@@ -17,9 +18,18 @@ class TaskViewCard extends React.Component {
         notes: foundTask.notes,
         id: foundTask.id
     }
-    
-    console.log(this.state)
     }
+
+    handleUpdate = (taskObj) => {
+        this.props.dispatchUpdate(taskObj);
+        this.setState({
+        task: taskObj.task,
+        priority: taskObj.priority,
+        category: taskObj.category,
+        notes: taskObj.notes,
+        id: taskObj.id
+        })
+    } 
 
     render(){
         const viewLink = `/tasks/${this.state.id}/edit`
@@ -30,7 +40,7 @@ class TaskViewCard extends React.Component {
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 
             <Switch>
-                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} task={this.state.task} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id}/>} />
+                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} task={this.state.task} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} handleUpdate={this.handleUpdate} />} />
             </Switch>
             <Link to={viewLink} >
             <button>Edit</button>
@@ -46,4 +56,12 @@ function mapStateToProps(state){
     }
   }
 
-export default connect(mapStateToProps)(TaskViewCard)
+  function mapDispatchToProps(dispatch){
+    return {
+        dispatchUpdate: (task) => {
+            console.log(task)
+            dispatch(updateTask(task))
+    }}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskViewCard)
