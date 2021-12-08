@@ -12,13 +12,16 @@ class TasksContainer extends React.Component {
     this.props.dispatchTasks()
   }
   
+  
   render() {
+    let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
     return (
     <div>
     <h1>Tasks Container</h1>
     <div>
       {console.log(this.props.tasks)}
-      {this.props.tasks.map((task) => <TaskCard key={task.id} task={task} />)}
+      {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)}
+      {/* {this.props.tasks.map((task) => <TaskCard key={task.id} task={task} />)} */}
     </div>
     <div>
     <TaskForm />
