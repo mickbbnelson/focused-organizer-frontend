@@ -21,18 +21,32 @@ class TasksContainer extends React.Component {
     this.setState({
     filterValue: category
     })
-} 
+  } 
+
+  filterArray(){
+    let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
+    if (this.state.filterValue === "") {
+      return prioritizedArray
+    } else {
+      let newArray = this.props.tasks.filter(task => task.category === this.state.filterValue);
+      return newArray
+    }
+  }
   
   render() {
     console.log(this.state)
-    let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
+    let filteredArray = this.filterArray()
+    //let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
     return (
     <div>
     <h1>Tasks Container</h1>
-    <TaskFilter filterUpdate={this.filterUpdate}/>
     <div>
-      {console.log(this.props.tasks)}
-      {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)}
+    <TaskFilter filterUpdate={this.filterUpdate}/>
+    </div>
+    <div>
+      {console.log(this.filterArray())}
+      {filteredArray.map((task) => <TaskCard key={task.id} task={task} />)}
+      {/* {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)} */}
       {/* {this.props.tasks.map((task) => <TaskCard key={task.id} task={task} />)} */}
     </div>
     <div>
