@@ -9,17 +9,27 @@ import TaskFilter from '../components/TasksFilter'
 
 class TasksContainer extends React.Component {
   
+  state = {
+    filterValue: ''
+  }
+
   componentDidMount(){
     this.props.dispatchTasks()
   }
   
+  filterUpdate = (category) => {
+    this.setState({
+    filterValue: category
+    })
+} 
   
   render() {
+    console.log(this.state)
     let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
     return (
     <div>
     <h1>Tasks Container</h1>
-    <TaskFilter />
+    <TaskFilter filterUpdate={this.filterUpdate}/>
     <div>
       {console.log(this.props.tasks)}
       {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)}
