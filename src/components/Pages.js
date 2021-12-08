@@ -14,7 +14,6 @@ export default function Pages() {
             <Route exact path="/tasks" component={routerProps => <TasksContainer routerProps={routerProps} />} />
             <Route path="/calendar" component={routerProps => <CalendarContainer routerProps={routerProps} />} />
             <Route path="/tasks/:id" component={routerProps => <TaskViewCard routerProps={routerProps} />} />
-            {/* <Route path="/tasks" component={routerProps => <TasksContainer routerProps={routerProps} />} /> */}
             <Route exact path="/" component={routerProps => <Home routerProps={routerProps} />} />
         </Switch>
     )

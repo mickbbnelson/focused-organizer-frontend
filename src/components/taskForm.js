@@ -5,7 +5,7 @@ import { addTask } from "../actions/TaskActions"
 class TaskForm extends React.Component {
   state = {
       task: '',
-      priority: 'High',
+      priority: 'Top',
       category: 'Home',
       notes: ''
   }
@@ -21,7 +21,7 @@ class TaskForm extends React.Component {
       this.props.dispatchTask(this.state)
       this.setState({
         task: '',
-        priority: 'High',
+        priority: 'Top',
         category: 'Home',
         notes: ''
     })
@@ -37,9 +37,9 @@ class TaskForm extends React.Component {
             
             <label htmlFor="priority-input">Priority:</label>
             <select type="text" name="priority" id="priority-input" onChange={this.handleChange} value={this.state.priority}> 
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>           
+                <option value="Top">Top</option>
+                <option value="Middle">Middle</option>
+                <option value="Bottom">Bottom</option>           
             </select>
             
             <label htmlFor="category-input">Category:</label>

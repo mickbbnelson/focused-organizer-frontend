@@ -33,9 +33,9 @@ class EditTaskForm extends React.Component {
             
             <label htmlFor="priority-update">Priority:</label>
             <select type="text" name="priority" id="priority-update" onChange={this.handleChange} value={this.state.priority}> 
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>           
+                <option value="Top">Top</option>
+                <option value="Middle">Middle</option>
+                <option value="Bottom">Bottom</option>           
             </select>
             
             <label htmlFor="category-update">Category:</label>
