@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
 import TaskForm from '../components/TaskForm'
 import TaskCard from '../components/TaskCard'
+import TaskFilter from '../components/TasksFilter'
 //import { Route, Switch } from 'react-router-dom'
 //import TaskViewCard from '../components/TaskViewCard'
 
@@ -18,6 +19,7 @@ class TasksContainer extends React.Component {
     return (
     <div>
     <h1>Tasks Container</h1>
+    <TaskFilter />
     <div>
       {console.log(this.props.tasks)}
       {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)}
