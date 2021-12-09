@@ -1,19 +1,42 @@
 import React from "react";
+import {connect} from "react-redux"
 import FullCalendar from '@fullcalendar/react'
 import listPlugin from '@fullcalendar/list'
 import interactionPlugin from '@fullcalendar/interaction'
+import {getTasks} from '../actions/TaskActions'
 
 class CalendarContainer extends React.Component {
+
+  componentDidMount(){
+    this.props.dispatchTasks()
+  }
   
   
     render() {
-    return (      
+      {console.log(this.props)}
+      let eventArray = this.props.tasks.map((task) => {
+        return {title: task.title, date: task.date}
+      }) 
+      {console.log(eventArray)} 
+    return (     
     <FullCalendar
       plugins={[ listPlugin ]}
       initialView="listWeek"
-      events={[{title: 'test', date: '2021-12-09T12:30:00'}, {title: 'test 2', date: '2021-12-10T03:00:00'}]}
+      events={eventArray}
     />)
   }
 }
 
-export default CalendarContainer;
+function mapDispatchToProps(dispatch){
+  return {
+    dispatchTasks: () => dispatch(getTasks())
+  }
+}
+
+function mapStateToProps(state){
+  return {
+    tasks: state
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CalendarContainer);
