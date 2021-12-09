@@ -54,12 +54,15 @@ class TaskForm extends React.Component {
             
             <label htmlFor="notes-input">Notes:</label>
             <input type="text" name="notes" id="notes-input" onChange={this.handleChange} value={this.state.notes} />
+            
+            <input type="submit" value="Add Task"/>
+            
             <h3>Optional date info</h3>
             
             <label htmlFor="dateinput">Date and time:</label>
             <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} />
 
-            <input type="submit" value="Add Task"/>
+            
         </form>
     </div>
     );
