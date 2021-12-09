@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from "react-redux"
 import { addTask } from "../actions/TaskActions"
-import TaskDateForm from "./TaskDateForm"
+//import TaskDateForm from "./TaskDateForm"
 
 class TaskForm extends React.Component {
   state = {
       title: '',
       priority: 'Top',
       category: 'Home',
-      notes: ''
+      notes: '',
+      date: ''
   }
 
   handleChange = (event) => {
@@ -24,8 +25,18 @@ class TaskForm extends React.Component {
         title: '',
         priority: 'Top',
         category: 'Home',
-        notes: ''
+        notes: '',
+        date: ''
     })
+  }
+
+  handleDate = (event) => {
+    let eventDate = new Date(event.target.value)
+    this.setState({
+      ...this.state,
+      date: eventDate.toISOString()
+    })
+    console.log(this.state)
   }
 
     render() {
@@ -53,10 +64,10 @@ class TaskForm extends React.Component {
             <label htmlFor="notes-input">Notes:</label>
             <input type="text" name="notes" id="notes-input" onChange={this.handleChange} value={this.state.notes} />
 
-            {/* <label htmlFor="date-input">Date:</label>
-            <input type="text" name="date" id="date-input" onChange={this.handleChange} value={this.state.date} /> */}
-            <TaskDateForm />
-            
+            <label htmlFor="date-input">Date:</label>
+            <input type="text" name="date" id="date-input" onChange={this.handleDate} value={this.state.date} />
+            {/* <TaskDateForm handleDate={this.handleDate()}/> */}
+
             <input type="submit" value="Add Task"/>
         </form>
     </div>
