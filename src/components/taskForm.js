@@ -60,9 +60,7 @@ class TaskForm extends React.Component {
             <h3>Optional date info</h3>
             
             <label htmlFor="dateinput">Date and time:</label>
-            <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} />
-
-            
+            <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} /> 
         </form>
     </div>
     );

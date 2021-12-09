@@ -15,6 +15,7 @@ class TaskViewCard extends React.Component {
         priority: foundTask.priority,
         category: foundTask.category,
         notes: foundTask.notes,
+        date: foundTask.date,
         id: foundTask.id,
         editButton: true,
         tasksButton: false
@@ -29,6 +30,7 @@ class TaskViewCard extends React.Component {
         category: taskObj.category,
         notes: taskObj.notes,
         id: taskObj.id,
+        date: taskObj.date,
         tasksButton: true
         })
     } 
@@ -48,8 +50,9 @@ class TaskViewCard extends React.Component {
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 
+            {this.state.date ? <p>Date: {this.state.date.split("T")[0]}</p> : null}
             <Switch>
-                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} title={this.state.title} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} handleUpdate={this.handleUpdate} />} />
+                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} title={this.state.title} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} date={this.state.date} handleUpdate={this.handleUpdate} />} />
             </Switch>
             {this.state.editButton ? <Link to={viewLink} >
             <button onClick={this.switchButton}>Edit</button>

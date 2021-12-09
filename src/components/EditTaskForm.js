@@ -8,7 +8,8 @@ class EditTaskForm extends React.Component {
         priority: this.props.priority,
         category: this.props.category,
         notes: this.props.notes,
-        id: this.props.id
+        id: this.props.id,
+        date: this.props.date
     }
 
     handleChange = (event) => {
@@ -47,6 +48,9 @@ class EditTaskForm extends React.Component {
             
             <label htmlFor="notes-update">Notes:</label>
             <input type="text" name="notes" id="notes-update" onChange={this.handleChange} value={this.state.notes} />
+
+            <label htmlFor="dateinput">Date and time:</label>
+            <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} /> 
 
             <input type="submit" value="Submit" />
         </form>
