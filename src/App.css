@@ -6,6 +6,23 @@ body {
     text-align: center;
 }
 
-.nav-link {
+#nav-link-home {
     padding: 2%
+}
+
+#nav-link-tasks {
+    padding: 2%
+}
+
+#nav-link-calendar {
+    padding: 2%
+}
+
+#pages {
+    background: lightcyan;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 10px auto;
+    max-width: 1200px;
+    padding: 1%; 
+    width: 65%;
 }
