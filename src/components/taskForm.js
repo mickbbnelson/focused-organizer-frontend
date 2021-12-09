@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux"
 import { addTask } from "../actions/TaskActions"
+import TaskDateForm from "./TaskDateForm"
 
 class TaskForm extends React.Component {
   state = {
@@ -52,6 +53,10 @@ class TaskForm extends React.Component {
             <label htmlFor="notes-input">Notes:</label>
             <input type="text" name="notes" id="notes-input" onChange={this.handleChange} value={this.state.notes} />
 
+            {/* <label htmlFor="date-input">Date:</label>
+            <input type="text" name="date" id="date-input" onChange={this.handleChange} value={this.state.date} /> */}
+            <TaskDateForm />
+            
             <input type="submit" value="Add Task"/>
         </form>
     </div>

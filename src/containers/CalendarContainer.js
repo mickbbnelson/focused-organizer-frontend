@@ -2,7 +2,6 @@ import React from "react";
 import {connect} from "react-redux"
 import FullCalendar from '@fullcalendar/react'
 import listPlugin from '@fullcalendar/list'
-import interactionPlugin from '@fullcalendar/interaction'
 import {getTasks} from '../actions/TaskActions'
 
 class CalendarContainer extends React.Component {
@@ -13,11 +12,10 @@ class CalendarContainer extends React.Component {
   
   
     render() {
-      {console.log(this.props)}
+      console.log(this.props)
       let eventArray = this.props.tasks.map((task) => {
         return {title: task.title, date: task.date}
       }) 
-      {console.log(eventArray)} 
     return (     
     <FullCalendar
       plugins={[ listPlugin ]}
