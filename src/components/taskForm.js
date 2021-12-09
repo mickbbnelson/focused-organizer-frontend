@@ -30,15 +30,6 @@ class TaskForm extends React.Component {
     })
   }
 
-  handleDate = (event) => {
-    let eventDate = new Date(event.target.value)
-    this.setState({
-      ...this.state,
-      date: eventDate.toISOString()
-    })
-    console.log(this.state)
-  }
-
     render() {
     return (
     <div>
@@ -63,10 +54,10 @@ class TaskForm extends React.Component {
             
             <label htmlFor="notes-input">Notes:</label>
             <input type="text" name="notes" id="notes-input" onChange={this.handleChange} value={this.state.notes} />
-
-            <label htmlFor="date-input">Date:</label>
-            <input type="text" name="date" id="date-input" onChange={this.handleDate} value={this.state.date} />
-            {/* <TaskDateForm handleDate={this.handleDate()}/> */}
+            <h3>Optional date info</h3>
+            
+            <label htmlFor="dateinput">Date and time:</label>
+            <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} />
 
             <input type="submit" value="Add Task"/>
         </form>
