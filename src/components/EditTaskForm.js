@@ -4,7 +4,7 @@ import { connect } from "react-redux"
 
 class EditTaskForm extends React.Component {
     state = {
-        task: this.props.task,
+        title: this.props.title,
         priority: this.props.priority,
         category: this.props.category,
         notes: this.props.notes,
@@ -28,8 +28,8 @@ class EditTaskForm extends React.Component {
         <div>
         <h1>Edit Task</h1>
         <form onSubmit={this.handleUpdate}>
-            <label htmlFor="task-update">Task:</label>
-            <input type="text" name="task" id="task-update" onChange={this.handleChange} value={this.state.task}/>
+            <label htmlFor="title-update">Title:</label>
+            <input type="text" name="title" id="title-update" onChange={this.handleChange} value={this.state.title}/>
             
             <label htmlFor="priority-update">Priority:</label>
             <select type="text" name="priority" id="priority-update" onChange={this.handleChange} value={this.state.priority}> 

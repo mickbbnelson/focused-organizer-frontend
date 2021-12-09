@@ -4,7 +4,7 @@ import { addTask } from "../actions/TaskActions"
 
 class TaskForm extends React.Component {
   state = {
-      task: '',
+      title: '',
       priority: 'Top',
       category: 'Home',
       notes: ''
@@ -20,7 +20,7 @@ class TaskForm extends React.Component {
       event.preventDefault()
       this.props.dispatchTask(this.state)
       this.setState({
-        task: '',
+        title: '',
         priority: 'Top',
         category: 'Home',
         notes: ''
@@ -32,8 +32,8 @@ class TaskForm extends React.Component {
     <div>
         <h1>Add a Task</h1>
         <form onSubmit={this.handleSubmit}>
-            <label htmlFor="task-input">Task:</label>
-            <input type="text" name="task" id="task-input" onChange={this.handleChange} value={this.state.task} />
+            <label htmlFor="title-input">Task:</label>
+            <input type="text" name="title" id="title-input" onChange={this.handleChange} value={this.state.title} />
             
             <label htmlFor="priority-input">Priority:</label>
             <select type="text" name="priority" id="priority-input" onChange={this.handleChange} value={this.state.priority}> 

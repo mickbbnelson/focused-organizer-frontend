@@ -11,7 +11,7 @@ class TaskViewCard extends React.Component {
     const foundTask = this.props.tasks.find(t => {return t.id === parseInt(this.props.routerProps.match.params.id)})
     
     this.state = {
-        task: foundTask.task,
+        title: foundTask.title,
         priority: foundTask.priority,
         category: foundTask.category,
         notes: foundTask.notes,
@@ -24,7 +24,7 @@ class TaskViewCard extends React.Component {
     handleUpdate = (taskObj) => {
         this.props.dispatchUpdate(taskObj);
         this.setState({
-        task: taskObj.task,
+        title: taskObj.title,
         priority: taskObj.priority,
         category: taskObj.category,
         notes: taskObj.notes,
@@ -44,12 +44,12 @@ class TaskViewCard extends React.Component {
         
         return (
             <div>
-            <h1>{this.state.task}</h1> 
+            <h1>{this.state.title}</h1> 
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 
             <Switch>
-                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} task={this.state.task} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} handleUpdate={this.handleUpdate} />} />
+                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} title={this.state.title} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} handleUpdate={this.handleUpdate} />} />
             </Switch>
             {this.state.editButton ? <Link to={viewLink} >
             <button onClick={this.switchButton}>Edit</button>
