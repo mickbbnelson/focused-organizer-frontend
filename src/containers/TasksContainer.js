@@ -39,7 +39,7 @@ class TasksContainer extends React.Component {
     //let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
     return (
     <div>
-    <h1>Tasks Container</h1>
+    <h1 class="center">Tasks</h1>
     <div>
     <TaskFilter filterUpdate={this.filterUpdate}/>
     </div>

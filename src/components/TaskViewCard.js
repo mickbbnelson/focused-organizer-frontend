@@ -46,7 +46,7 @@ class TaskViewCard extends React.Component {
         
         return (
             <div>
-            <h1>{this.state.title}</h1> 
+            <h1 class="center">{this.state.title}</h1> 
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 

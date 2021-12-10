@@ -2,8 +2,8 @@ body {
     background-image: url('https://wallpaperbat.com/img/263768-simple-light-wallpaper-top-free-simple-light-background.jpg');
 }
 
-#nav-bar {
-    text-align: center;
+.center {
+    text-align: center; 
 }
 
 #nav-link-home {

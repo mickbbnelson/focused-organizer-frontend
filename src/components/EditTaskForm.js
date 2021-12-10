@@ -27,7 +27,7 @@ class EditTaskForm extends React.Component {
         console.log(this.props)
         return (
         <div>
-        <h1>Edit Task</h1>
+        <h1 class="center">Edit Task</h1>
         <form onSubmit={this.handleUpdate}>
             <label htmlFor="title-update">Title:</label>
             <input type="text" name="title" id="title-update" onChange={this.handleChange} value={this.state.title}/>

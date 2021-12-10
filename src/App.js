@@ -8,7 +8,6 @@ function App() {
     <div id="app">
       <NavBar />
       <div id="pages">
-      <h1>Lets Get Organized!</h1>
       <Pages />
       </div>
     </div>
