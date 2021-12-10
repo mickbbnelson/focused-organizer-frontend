@@ -2,6 +2,30 @@ body {
     background-image: url('https://wallpaperbat.com/img/263768-simple-light-wallpaper-top-free-simple-light-background.jpg');
 }
 
+#class-card {
+    text-align: start;
+    border: .5px solid black;
+    max-width: 1200px;
+    padding: 1%; 
+}
+
+#view {
+    float: right;
+}
+
+#delete {
+    float: right;
+}
+
+#class-cards {
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 10px auto;
+    max-width: 1200px;
+    padding: 1%; 
+    width: 65%;
+}
+
 .center {
     text-align: center; 
 }

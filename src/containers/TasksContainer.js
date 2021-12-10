@@ -43,7 +43,7 @@ class TasksContainer extends React.Component {
     <div>
     <TaskFilter filterUpdate={this.filterUpdate}/>
     </div>
-    <div>
+    <div id="class-cards">
       {console.log(this.filterArray())}
       {filteredArray.map((task) => <TaskCard key={task.id} task={task} />)}
       {/* {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)} */}
