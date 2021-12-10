@@ -32,27 +32,27 @@ class TaskForm extends React.Component {
 
     render() {
     return (
-    <div>
-        <h1 class="center">Add a Task</h1>
+    <div class="center">
+        <h1 class="center">Add Task</h1>
         <form onSubmit={this.handleSubmit}>
             <label htmlFor="title-input">Task:</label>
-            <input type="text" name="title" id="title-input" onChange={this.handleChange} value={this.state.title} />
+            <input type="text" name="title" id="title-input" maxlength="35" onChange={this.handleChange} value={this.state.title} />
             
-            <label htmlFor="priority-input">Priority:</label>
+            <label htmlFor="priority-input"> Priority:</label>
             <select type="text" name="priority" id="priority-input" onChange={this.handleChange} value={this.state.priority}> 
                 <option value="Top">Top</option>
                 <option value="Middle">Middle</option>
                 <option value="Bottom">Bottom</option>           
             </select>
             
-            <label htmlFor="category-input">Category:</label>
+            <label htmlFor="category-input"> Category:</label>
             <select type="text" name="category" id="category-input" onChange={this.handleChange} value={this.state.category}> 
                 <option value="Home">Home</option>
                 <option value="School">School</option>
                 <option value="Work">Work</option>  
             </select>
             
-            <label htmlFor="notes-input">Notes:</label>
+            <label htmlFor="notes-input"> Notes:</label>
             <input type="text" name="notes" id="notes-input" onChange={this.handleChange} value={this.state.notes} />
             
             <input type="submit" value="Add Task"/>

@@ -13,7 +13,7 @@ const TaskCard = (props) => {
     const viewLink = `/tasks/${props.task.id}`
 
     return (
-        <div id="class-card">
+        <div id="task-card">
             <span>{props.task.title} - Priority: {props.task.priority}</span>
             <button onClick={handleClick} id="delete">Delete</button>
             <Link to={viewLink} >

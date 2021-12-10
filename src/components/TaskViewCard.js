@@ -45,12 +45,14 @@ class TaskViewCard extends React.Component {
         const viewLink = `/tasks/${this.state.id}/edit`
         
         return (
-            <div>
+            <div id="view-card">
+            <div class="center">
             <h1 class="center">{this.state.title}</h1> 
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 
             {this.state.date ? <p>Date: {this.state.date.split("T")[0]}</p> : null}
+            </div>
             <Switch>
                 <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} title={this.state.title} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} date={this.state.date} handleUpdate={this.handleUpdate} />} />
             </Switch>

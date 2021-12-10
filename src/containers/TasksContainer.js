@@ -41,7 +41,7 @@ class TasksContainer extends React.Component {
     <div>
     <h1 class="center">Tasks</h1>
 
-    <div id="class-cards">
+    <div id="task-cards">
       {console.log(this.filterArray())}
       {filteredArray.map((task) => <TaskCard key={task.id} task={task} />)}
       {/* {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)} */}
