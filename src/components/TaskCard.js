@@ -14,7 +14,7 @@ const TaskCard = (props) => {
 
     return (
         <div id="class-card">
-            <span>-{props.task.title} - Priority: {props.task.priority}</span>
+            <span>{props.task.title} - Priority: {props.task.priority}</span>
             <button onClick={handleClick} id="delete">Delete</button>
             <Link to={viewLink} >
             <button id="view">View</button>
