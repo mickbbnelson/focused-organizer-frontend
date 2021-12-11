@@ -2,7 +2,9 @@ Focused Organizer Frontend
 
 Description: Welcome to Focused Organizer Application, the perfect tool to stay organized to help accomplish your goals.  With this app, users can create tasks to add to a prioritized list.  From the task list view users can filter taks, click to view more details about a task, edit a task or delet a task once it has been completed.  Users can also view a calendar which will display date/time specific tasks under the specific date.
 
-Installation: In order to install correctly, you must install the backend first please follow this link: https://github.com/mickbbnelson/focused-organizer-backend.
+Installation: 
+
+In order to install correctly, you must install the backend first please follow this link: https://github.com/mickbbnelson/focused-organizer-backend.
 
 Running the Application:
 
