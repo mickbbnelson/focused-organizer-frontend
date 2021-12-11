@@ -5,12 +5,11 @@ const UPDATE_TASK = "UPDATE_TASK"
 const BASE_URL = "http://localhost:3000/tasks/"
 
 export const getTasks = () => {
-    return (dispatch) => {          //dispatch comes from thunk middleware
+    return (dispatch) => {   
         fetch(BASE_URL)
         .then(response => response.json())
         .then(data => dispatch({type: GET_TASKS, payload: data}))
 }}
-
 
 export const addTask = (task) => {
     const configObject = {

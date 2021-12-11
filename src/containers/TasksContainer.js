@@ -4,8 +4,6 @@ import {getTasks} from '../actions/TaskActions'
 import TaskForm from '../components/TaskForm'
 import TaskCard from '../components/TaskCard'
 import TaskFilter from '../components/TasksFilter'
-//import { Route, Switch } from 'react-router-dom'
-//import TaskViewCard from '../components/TaskViewCard'
 
 class TasksContainer extends React.Component {
   
@@ -36,7 +34,6 @@ class TasksContainer extends React.Component {
   render() {
     console.log(this.state)
     let filteredArray = this.filterArray()
-    //let prioritizedArray = this.props.tasks.sort((a, b) => (a.priority > b.priority) ? -1 : 1)
     return (
     <div>
     <h1 class="center">Tasks</h1>
@@ -44,8 +41,6 @@ class TasksContainer extends React.Component {
     <div id="task-cards">
       {console.log(this.filterArray())}
       {filteredArray.map((task) => <TaskCard key={task.id} task={task} />)}
-      {/* {prioritizedArray.map((task) => <TaskCard key={task.id} task={task} />)} */}
-      {/* {this.props.tasks.map((task) => <TaskCard key={task.id} task={task} />)} */}
     </div>
     <div class="center">
     <TaskFilter filterUpdate={this.filterUpdate}/>

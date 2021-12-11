@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux"
 import { addTask } from "../actions/TaskActions"
-//import TaskDateForm from "./TaskDateForm"
 
 class TaskForm extends React.Component {
   state = {

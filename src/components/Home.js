@@ -7,9 +7,7 @@ class Home extends React.Component {
     return (
     <div>
       <h1 class="center">Focused Organizer</h1>
-    <p>
-        Stay organize, keep focused, acheive your goals
-    </p>
+      <p>Stay organize, keep focused, acheive your goals</p>
     </div>
   )}
 }

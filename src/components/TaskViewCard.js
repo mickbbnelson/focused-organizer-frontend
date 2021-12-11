@@ -8,17 +8,17 @@ class TaskViewCard extends React.Component {
     constructor(props){
     super(props)
 
-    const foundTask = this.props.tasks.find(t => {return t.id === parseInt(this.props.routerProps.match.params.id)})
+    const foundTask = this.props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})
     
     this.state = {
-        title: foundTask.title,
-        priority: foundTask.priority,
-        category: foundTask.category,
-        notes: foundTask.notes,
-        date: foundTask.date,
-        id: foundTask.id,
+        title: foundTask ? foundTask.title : '',
+        priority: foundTask ? foundTask.priority : '',
+        category: foundTask ? foundTask.category : '',
+        notes: foundTask ? foundTask.notes : '',
+        date: foundTask ? foundTask.date : '',
+        id: foundTask ? foundTask.id : '',
         editButton: true,
-        tasksButton: false
+        tasksButton: false 
     }
     }
 
@@ -43,7 +43,7 @@ class TaskViewCard extends React.Component {
 
     render(){
         const viewLink = `/tasks/${this.state.id}/edit`
-        
+        console.log(this.props.routerProps)
         return (
             <div id="view-card">
             <div class="center">

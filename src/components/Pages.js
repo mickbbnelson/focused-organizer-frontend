@@ -4,10 +4,8 @@ import TasksContainer from '../containers/TasksContainer';
 import CalendarContainer from '../containers/CalendarContainer';
 import Home from './Home'
 import TaskViewCard from './TaskViewCard'
-//import EditTaskForm from './EditTaskForm'
 
 export default function Pages() {
-    //const taskRoutes = '/tasks' || 'tasks/tasks'
 
     return (
         <div>

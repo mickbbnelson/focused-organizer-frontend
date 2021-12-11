@@ -1,5 +1,4 @@
 import React from "react";
-//import { updateTask } from '../actions/TaskActions'
 import { connect } from "react-redux"
 
 class EditTaskForm extends React.Component {
@@ -49,7 +48,7 @@ class EditTaskForm extends React.Component {
             <label htmlFor="notes-update"> Notes:</label>
             <input type="text" name="notes" id="notes-update" onChange={this.handleChange} value={this.state.notes} />
             <br /><br />
-            <label htmlFor="dateinput">Date and time:</label>
+            <label htmlFor="dateinput">Date and time(optional):</label>
             <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} /> 
 
             <input type="submit" value="Submit" />
@@ -58,13 +57,5 @@ class EditTaskForm extends React.Component {
         )
     }
 }
-
-//function mapDispatchToProps(dispatch){
-//    return {
-//        dispatchUpdate: (task) => {
-//            console.log(task.id)
-//            dispatch(updateTask(task))
-//    }}
-//}
 
 export default connect ()(EditTaskForm)
