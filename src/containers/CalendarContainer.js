@@ -1,8 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
-import FullCalendar from '@fullcalendar/react'
-import listPlugin from '@fullcalendar/list'
 import {getTasks} from '../actions/TaskActions'
+import CalendarCard from '../components/CalendarCard'
 
 class CalendarContainer extends React.Component {
 
@@ -13,15 +12,8 @@ class CalendarContainer extends React.Component {
   
     render() {
       console.log(this.props)
-      let eventArray = this.props.tasks.map((task) => {
-        return {title: task.title, date: task.date}
-      }) 
     return (     
-    <FullCalendar
-      plugins={[ listPlugin ]}
-      initialView="listWeek"
-      events={eventArray}
-    />)
+    <CalendarCard tasks={this.props.tasks} />)
   }
 }
 

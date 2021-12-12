@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux"
 import EditTaskForm from "./EditTaskForm"
-import { Switch, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import { updateTask } from '../actions/TaskActions'
 
 class TaskViewCard extends React.Component {
