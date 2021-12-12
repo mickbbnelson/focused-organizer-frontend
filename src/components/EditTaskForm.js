@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux"
+//import { connect } from "react-redux"
 
 class EditTaskForm extends React.Component {
     state = {
@@ -58,4 +58,4 @@ class EditTaskForm extends React.Component {
     }
 }
 
-export default connect ()(EditTaskForm)
+export default EditTaskForm
