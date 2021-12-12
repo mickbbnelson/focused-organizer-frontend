@@ -53,9 +53,7 @@ class TaskViewCard extends React.Component {
             <p>Notes: {this.state.notes}</p> 
             {this.state.date ? <p>Date: {this.state.date.split("T")[0]}</p> : null}
             </div>
-            <Switch>
-                <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} title={this.state.title} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} date={this.state.date} handleUpdate={this.handleUpdate} />} />
-            </Switch>
+            <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} title={this.state.title} priority={this.state.priority} category={this.state.category} notes={this.state.notes} id={this.state.id} date={this.state.date} handleUpdate={this.handleUpdate} />} />
             {this.state.editButton ? <Link to={viewLink} >
             <button onClick={this.switchButton}>Edit</button>
             </Link> : null}
