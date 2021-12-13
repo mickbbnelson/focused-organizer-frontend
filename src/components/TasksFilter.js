@@ -1,18 +1,17 @@
 import React from "react";
 
-class TasksFilter extends React.Component {
+const TasksFilter = (props) => {
   
-  filterUpdate = (event) => {
+  const filterUpdate = (event) => {
     event.preventDefault();
-    this.props.filterUpdate(event.target.value);
+    props.filterUpdate(event.target.value);
   } 
     
-    render(){
-        return (
-            <form onChange={this.filterUpdate}>
+      return (
+          <form onChange={filterUpdate}>
             <label>Filter by Category:</label>
             <select type="text" name="category" id="category-input"> 
-              <option value=""></option>
+             <option value=""></option>
               <option value="Home">Home</option>
               <option value="School">School</option>
               <option value="Work">Work</option> 
@@ -20,6 +19,5 @@ class TasksFilter extends React.Component {
           </form>
         )
     }
-}
 
 export default TasksFilter

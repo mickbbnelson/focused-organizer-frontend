@@ -5,7 +5,7 @@ import CalendarContainer from '../containers/CalendarContainer';
 import Home from './Home'
 import TaskViewCard from './TaskViewCard'
 
-export default function Pages() {
+const Pages = () => {
 
     return (
         <div>
@@ -18,3 +18,5 @@ export default function Pages() {
         </div>
     )
 }
+
+export default Pages
