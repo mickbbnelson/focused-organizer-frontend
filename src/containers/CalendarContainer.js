@@ -10,9 +10,11 @@ class CalendarContainer extends React.Component {
   }
   
     render() {
-      console.log(this.props)
+      let eventArray = this.props.tasks.map((task) => {
+        return {title: task.title, date: task.date}
+      }) 
       return (     
-       <CalendarCard tasks={this.props.tasks} />)
+       <CalendarCard tasks={eventArray} />)
   }
 }
 
