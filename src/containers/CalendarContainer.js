@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
-import CalendarCard from '../components/CalendarCard'
+import CalendarCard from '../components/CalendarComponents/CalendarCard'
 
 class CalendarContainer extends React.Component {
 

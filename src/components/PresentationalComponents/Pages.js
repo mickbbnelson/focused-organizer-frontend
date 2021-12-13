@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import TasksContainer from '../containers/TasksContainer';
-import CalendarContainer from '../containers/CalendarContainer';
+import TasksContainer from '../../containers/TasksContainer';
+import CalendarContainer from '../../containers/CalendarContainer';
 import Home from './Home'
-import TaskViewCard from './TaskViewCard'
+import TaskViewCard from '../TaskComponents/TaskViewCard'
 
 const Pages = () => {
 

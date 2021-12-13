@@ -1,9 +1,9 @@
 import React from "react";
 import {connect} from "react-redux"
 import {getTasks, deleteTask, addTask} from '../actions/TaskActions'
-import TaskForm from '../components/TaskForm'
-import TaskCard from '../components/TaskCard'
-import TaskFilter from '../components/TasksFilter'
+import TaskForm from '../components/TaskComponents/TaskForm'
+import TaskCard from '../components/TaskComponents/TaskCard'
+import TaskFilter from '../components/TaskComponents/TasksFilter'
 
 class TasksContainer extends React.Component {
   
