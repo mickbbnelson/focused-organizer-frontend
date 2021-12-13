@@ -5,7 +5,7 @@ const TaskCard = (props) => {
     console.log(props)
 
     function handleClick(){
-        props.handleDelete(props.task.id)
+       props.handleDelete(props.task.id)
     }
 
     const viewLink = `/tasks/${props.task.id}`

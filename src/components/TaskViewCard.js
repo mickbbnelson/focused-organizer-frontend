@@ -46,8 +46,8 @@ class TaskViewCard extends React.Component {
         console.log(this.props.routerProps)
         return (
             <div id="view-card">
-            <div class="center">
-            <h1 class="center">{this.state.title}</h1> 
+            <div className="center">
+            <h1 className="center">{this.state.title}</h1> 
             <p>Priority: {this.state.priority}</p> 
             <p>Category: {this.state.category}</p> 
             <p>Notes: {this.state.notes}</p> 

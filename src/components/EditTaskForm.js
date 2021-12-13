@@ -24,11 +24,11 @@ class EditTaskForm extends React.Component {
     render(){
         console.log(this.props)
         return (
-        <div class="center">
-        <h1 class="center">Edit Task</h1>
+        <div className="center">
+        <h1 className="center">Edit Task</h1>
         <form onSubmit={this.handleUpdate}>
             <label htmlFor="title-update">Title:</label>
-            <input type="text" name="title" id="title-update" onChange={this.handleChange} value={this.state.title}/>
+            <input type="text" name="title" id="title-update" maxLength="35" onChange={this.handleChange} value={this.state.title}/>
             
             <label htmlFor="priority-update"> Priority:</label>
             <select type="text" name="priority" id="priority-update" onChange={this.handleChange} value={this.state.priority}> 

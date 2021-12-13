@@ -29,11 +29,11 @@ class TaskForm extends React.Component {
 
     render() {
     return (
-    <div class="center">
-        <h1 class="center">Add Task</h1>
+    <div className="center">
+        <h1 className="center">Add Task</h1>
         <form onSubmit={this.handleSubmit}>
             <label htmlFor="title-input">Task:</label>
-            <input type="text" name="title" id="title-input" maxlength="35" onChange={this.handleChange} value={this.state.title} />
+            <input type="text" name="title" id="title-input" maxLength="35" onChange={this.handleChange} value={this.state.title} />
             
             <label htmlFor="priority-input"> Priority:</label>
             <select type="text" name="priority" id="priority-input" onChange={this.handleChange} value={this.state.priority}> 
