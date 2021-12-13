@@ -6,6 +6,10 @@ Installation:
 
 In order to install correctly, you must install the backend first please follow this link: https://github.com/mickbbnelson/focused-organizer-backend.
 
+-For frontend installation, run yarn install to install yarn
+
+-Then run nvm install 16 for the correct node version
+
 Running the Application:
 
 -In the backend directory run the backend server by typing "rails s" into the terminal
