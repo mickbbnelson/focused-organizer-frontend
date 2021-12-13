@@ -9,11 +9,10 @@ class CalendarContainer extends React.Component {
     this.props.dispatchTasks()
   }
   
-  
     render() {
       console.log(this.props)
-    return (     
-    <CalendarCard tasks={this.props.tasks} />)
+      return (     
+       <CalendarCard tasks={this.props.tasks} />)
   }
 }
 
