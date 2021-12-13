@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux"
-import {getTasks, deleteTask} from '../actions/TaskActions'
+import {getTasks, deleteTask, addTask} from '../actions/TaskActions'
 import TaskForm from '../components/TaskForm'
 import TaskCard from '../components/TaskCard'
 import TaskFilter from '../components/TasksFilter'
@@ -17,6 +17,10 @@ class TasksContainer extends React.Component {
 
   handleDelete = (taskid) => {
     this.props.dispatchDelete(taskid)
+  }
+
+  handleAdd = (task) => {
+    this.props.dispatchAdd(task)
   }
   
   filterUpdate = (category) => {
@@ -50,7 +54,7 @@ class TasksContainer extends React.Component {
     <TaskFilter filterUpdate={this.filterUpdate}/>
     </div>
     <div>
-    <TaskForm />
+    <TaskForm handleAdd={this.handleAdd} />
     </div>
     </div>
     );
@@ -60,7 +64,8 @@ class TasksContainer extends React.Component {
 function mapDispatchToProps(dispatch){
   return {
     dispatchTasks: () => dispatch(getTasks()),
-    dispatchDelete: (taskid) => dispatch(deleteTask(taskid))
+    dispatchDelete: (taskid) => dispatch(deleteTask(taskid)),
+    dispatchAdd: (task) => dispatch(addTask(task))
   }
 }
 
