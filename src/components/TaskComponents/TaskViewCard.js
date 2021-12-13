@@ -1,4 +1,3 @@
-import React from "react";
 import { connect } from "react-redux"
 import EditTaskForm from "./EditTaskForm"
 import { Route, Link } from 'react-router-dom';

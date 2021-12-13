@@ -1,4 +1,3 @@
-import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import TasksContainer from '../../containers/TasksContainer';
 import CalendarContainer from '../../containers/CalendarContainer';
