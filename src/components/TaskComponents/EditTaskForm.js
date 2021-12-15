@@ -19,6 +19,8 @@ class EditTaskForm extends React.Component {
     handleUpdate = (event) => {
         event.preventDefault();
         this.props.handleUpdate(this.state);
+        this.props.switchButton()
+        this.props.routerProps.history.push(`/tasks/${this.state.id}`)
     } 
 
     render(){
