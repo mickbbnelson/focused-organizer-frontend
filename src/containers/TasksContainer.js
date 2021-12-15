@@ -34,7 +34,7 @@ class TasksContainer extends React.Component {
     if (this.state.filterValue === "") {
       return prioritizedArray
     } else {
-      let newArray = this.props.tasks.filter(task => task.category === this.state.filterValue);
+      let newArray = prioritizedArray.filter(task => task.category === this.state.filterValue);
       return newArray
     }
   }
