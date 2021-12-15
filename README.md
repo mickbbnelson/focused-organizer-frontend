@@ -6,9 +6,15 @@ Installation:
 
 In order to install correctly, you must install the backend first please follow this link: https://github.com/mickbbnelson/focused-organizer-backend.
 
+<<<<<<< HEAD
 -For frontend installation, run "yarn install" to install yarn
 
 -Then run "nvm install 16" for the correct node version
+=======
+-For frontend installation, run yarn install to install yarn
+
+-Then run nvm install 16 for the correct node version
+>>>>>>> 97a32a6419250a89685595346b555cb49097411f
 
 Running the Application:
 
