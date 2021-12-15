@@ -40,19 +40,18 @@ class TasksContainer extends React.Component {
   }
   
   render() {
-    console.log(this.state)
-    let filteredArray = this.filterArray()
     return (
     <div>
     <h1 className="center">Tasks</h1>
 
     <div id="task-cards">
-      {console.log(this.filterArray())}
-      {filteredArray.map((task) => <TaskCard key={task.id} task={task} handleDelete={this.handleDelete}/>)}
+      {this.filterArray().map((task) => <TaskCard key={task.id} task={task} handleDelete={this.handleDelete}/>)}
     </div>
+
     <div className="center">
     <TaskFilter filterUpdate={this.filterUpdate}/>
     </div>
+
     <div>
     <TaskForm handleAdd={this.handleAdd} />
     </div>

@@ -43,7 +43,6 @@ class TaskViewCard extends React.Component {
 
     render(){
         const viewLink = `/tasks/${this.state.id}/edit`
-        console.log(this.props.routerProps)
         return (
             <div id="view-card">
             <div className="center">
