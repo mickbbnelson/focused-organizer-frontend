@@ -1,20 +1,14 @@
 Focused Organizer Frontend
 
-Description: Welcome to Focused Organizer Application, the perfect tool to stay organized to help accomplish your goals.  With this app, users can create tasks to add to a prioritized list.  From the task list view users can filter tasks, click to view more details about a task, edit a task or delete a task once it has been completed.  Users can also view a calendar which will display date/time specific tasks under the specific date.
+Description: Welcome to Focused Organizer Application, the perfect tool students who also need to juggle work and personal responsibilities.  With this app, users can create tasks to add to a prioritized list.  From the task list view users can filter tasks, click to view more details about a task, edit a task or delete a task once it has been completed.  Users can also view a calendar which will display date/time specific tasks under the specific date.
 
 Installation: 
 
 In order to install correctly, you must install the backend first please follow this link: https://github.com/mickbbnelson/focused-organizer-backend.
 
-<<<<<<< HEAD
 -For frontend installation, run "yarn install" to install yarn
 
 -Then run "nvm install 16" for the correct node version
-=======
--For frontend installation, run yarn install to install yarn
-
--Then run nvm install 16 for the correct node version
->>>>>>> 97a32a6419250a89685595346b555cb49097411f
 
 Running the Application:
 
