@@ -10,7 +10,7 @@ const TasksFilter = (props) => {
           <form onChange={filterUpdate}>
             <label>Filter by Category:</label>
             <select type="text" name="category" id="category-input"> 
-             <option value=""></option>
+             <option value="">All</option>
               <option value="Home">Home</option>
               <option value="School">School</option>
               <option value="Work">Work</option> 

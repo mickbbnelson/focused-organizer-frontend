@@ -1,7 +1,4 @@
-const GET_TASKS = "GET_TASKS"
-const ADD_TASK = "ADD_TASK"
-const DELETE_TASK = "DELETE_TASK"
-const UPDATE_TASK = "UPDATE_TASK"
+import {GET_TASKS, ADD_TASK, DELETE_TASK, UPDATE_TASK} from '../constants'
 const BASE_URL = "http://localhost:3000/tasks/"
 
 export const getTasks = () => {
