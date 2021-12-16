@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux"
-import EditTaskForm from "./EditTaskForm"
+import EditTaskForm from "../components/TaskViewComponents/EditTaskForm"
 import { Route, Link } from 'react-router-dom';
-import { updateTask, getTasks } from '../../actions/TaskActions'
+import { updateTask, getTasks } from '../actions/TaskActions'
 
-class TaskViewPage extends React.Component {
+class TaskViewContainer extends React.Component {
     state = {
         title: '',
         priority: '',
@@ -87,4 +87,4 @@ function mapStateToProps(state){
         dispatchTasks: () => dispatch(getTasks())
 }}
 
-export default connect(mapStateToProps, mapDispatchToProps)(TaskViewPage)
+export default connect(mapStateToProps, mapDispatchToProps)(TaskViewContainer)
