@@ -1,7 +1,7 @@
 const TaskViewDisplay = ({title, priority, category, notes, date}) => {
 
     return (
-        <div id="task-view-dispaly">
+        <div id="view-card">
            <div className="center">
             <h1 className="center">{title}</h1> 
             <p>Priority: {priority}</p> 
