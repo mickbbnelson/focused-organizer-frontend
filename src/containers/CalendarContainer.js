@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
-import CalendarCard from '../components/CalendarComponents/CalendarPage'
+import CalendarPage from '../components/CalendarComponents/CalendarPage'
 
 class CalendarContainer extends React.Component {
 
@@ -14,7 +14,7 @@ class CalendarContainer extends React.Component {
         return {title: task.title, date: task.date}
       }) 
       return (     
-       <CalendarCard tasks={eventArray} />)
+       <CalendarPage tasks={eventArray} />)
   }
 }
 

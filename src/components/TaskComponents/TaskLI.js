@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const TaskCard = (props) => {
+const TaskLI = (props) => {
 
     const viewLink = `/tasks/${props.task.id}`
 
@@ -15,4 +15,4 @@ const TaskCard = (props) => {
     )
 }
 
-export default TaskCard;
+export default TaskLI;

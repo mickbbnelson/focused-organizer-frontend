@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux"
 import {getTasks, deleteTask, addTask} from '../actions/TaskActions'
 import TaskForm from '../components/TaskComponents/TaskForm'
-import TaskCard from '../components/TaskComponents/TaskLI'
+import TaskLI from '../components/TaskComponents/TaskLI'
 import TaskFilter from '../components/TaskComponents/TasksFilter'
 
 class TasksContainer extends React.Component {
@@ -45,7 +45,7 @@ class TasksContainer extends React.Component {
     <h1 className="center">Tasks</h1>
 
     <div id="task-cards">
-      {this.filterArray().map((task) => <TaskCard key={task.id} task={task} handleDelete={this.handleDelete}/>)}
+      {this.filterArray().map((task) => <TaskLI key={task.id} task={task} handleDelete={this.handleDelete}/>)}
     </div>
 
     <div className="center">

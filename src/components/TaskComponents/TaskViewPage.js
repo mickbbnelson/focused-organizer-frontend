@@ -4,7 +4,7 @@ import EditTaskForm from "./EditTaskForm"
 import { Route, Link } from 'react-router-dom';
 import { updateTask } from '../../actions/TaskActions'
 
-class TaskViewCard extends React.Component {
+class TaskViewPage extends React.Component {
     constructor(props){
     super(props)
 
@@ -74,4 +74,4 @@ function mapStateToProps(state){
         dispatchUpdate: (task) => {dispatch(updateTask(task))}
 }}
 
-export default connect(mapStateToProps, mapDispatchToProps)(TaskViewCard)
+export default connect(mapStateToProps, mapDispatchToProps)(TaskViewPage)

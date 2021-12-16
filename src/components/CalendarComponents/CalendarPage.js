@@ -1,7 +1,7 @@
 import FullCalendar from '@fullcalendar/react'
 import listPlugin from '@fullcalendar/list'
 
-const CalendarCard = (props) => {
+const CalendarPage = (props) => {
   console.log(props)
     return (     
         <FullCalendar
@@ -11,4 +11,4 @@ const CalendarCard = (props) => {
         />)
 }
 
-export default CalendarCard;
+export default CalendarPage;
