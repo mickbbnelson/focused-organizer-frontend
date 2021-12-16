@@ -2,12 +2,12 @@ import React from "react";
 
 class EditTaskForm extends React.Component {
     state = {
-        title: this.props.title,
-        priority: this.props.priority,
-        category: this.props.category,
-        notes: this.props.notes,
-        id: this.props.id,
-        date: this.props.date
+        title: this.props.task.title,
+        priority: this.props.task.brpriority,
+        category: this.props.task.category,
+        notes: this.props.task.notes,
+        id: this.props.task.id,
+        date: this.props.task.date
     }
 
     handleChange = (event) => {
