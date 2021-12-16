@@ -18,9 +18,9 @@ class TaskViewCard extends React.Component {
         date: foundTask ? foundTask.date : '',
         id: foundTask ? foundTask.id : '',
         editButton: true,
-        tasksButton: false 
     }
     }
+
 
     handleUpdate = (taskObj) => {
         this.props.dispatchUpdate(taskObj);
@@ -63,6 +63,7 @@ class TaskViewCard extends React.Component {
 }
 
 function mapStateToProps(state){
+    console.log(state)
     return {
       tasks: state
     }
@@ -70,10 +71,7 @@ function mapStateToProps(state){
 
   function mapDispatchToProps(dispatch){
     return {
-        dispatchUpdate: (task) => {
-            console.log(task)
-            dispatch(updateTask(task))
-    }}
-}
+        dispatchUpdate: (task) => {dispatch(updateTask(task))}
+}}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TaskViewCard)

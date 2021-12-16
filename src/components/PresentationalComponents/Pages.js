@@ -2,10 +2,9 @@ import { Switch, Route } from 'react-router-dom';
 import TasksContainer from '../../containers/TasksContainer';
 import CalendarContainer from '../../containers/CalendarContainer';
 import Home from './Home'
-import TaskViewCard from '../TaskComponents/TaskViewCard'
+import TaskViewCard from '../TaskComponents/TaskViewPage'
 
 const Pages = () => {
-
     return (
         <div>
         <Switch>

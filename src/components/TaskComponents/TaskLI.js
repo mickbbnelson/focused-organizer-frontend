@@ -8,7 +8,7 @@ const TaskCard = (props) => {
         <div id="task-card">
             <span>{props.task.title} - Priority: {props.task.priority}</span>
             <button onClick={() => props.handleDelete(props.task.id)} id="delete">Delete</button>
-            <Link to={viewLink} >
+            <Link to={viewLink}>
             <button id="view">View</button>
             </Link>
         </div>
