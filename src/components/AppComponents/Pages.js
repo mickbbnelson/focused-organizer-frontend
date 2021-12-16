@@ -1,9 +1,8 @@
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import TasksContainer from '../../containers/TasksContainer';
 import CalendarContainer from '../../containers/CalendarContainer';
 import About from './About'
 import TaskViewContainer from '../../containers/TaskViewContainer'
-import Error from './Error'
 
 const Pages = () => {
     return (

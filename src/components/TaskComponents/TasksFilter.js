@@ -6,6 +6,7 @@ const TasksFilter = (props) => {
   } 
     
       return (
+        <div className="center">
           <form onChange={filterUpdate}>
             <label>Filter by Category:</label>
             <select type="text" name="category" id="category-input"> 
@@ -15,6 +16,7 @@ const TasksFilter = (props) => {
               <option value="Work">Work</option> 
             </select> 
           </form>
+        </div>
         )
     }
 

@@ -48,13 +48,9 @@ class TasksContainer extends React.Component {
       {this.filterArray().map((task) => <TaskLI key={task.id} task={task} handleDelete={this.handleDelete}/>)}
     </div>
 
-    <div className="center">
     <TaskFilter filterUpdate={this.filterUpdate}/>
-    </div>
 
-    <div>
     <TaskForm handleAdd={this.handleAdd} />
-    </div>
     </div>
     );
   }
