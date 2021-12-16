@@ -2,14 +2,12 @@ import React from "react";
 import { connect } from "react-redux"
 import EditTaskForm from "./EditTaskForm"
 import { Route, Link } from 'react-router-dom';
-import { updateTask } from '../../actions/TaskActions'
+import { updateTask, getTasks } from '../../actions/TaskActions'
 
 class TaskViewPage extends React.Component {
     constructor(props){
     super(props)
-
-    const foundTask = this.props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})
-    
+    const foundTask = props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})
     this.state = {
         title: foundTask ? foundTask.title : '',
         priority: foundTask ? foundTask.priority : '',
@@ -21,6 +19,24 @@ class TaskViewPage extends React.Component {
     }
     }
 
+    componentDidMount(){
+        this.props.dispatchTasks() 
+    }
+
+    componentDidUpdate(){
+        if (this.state.title === "") {
+            const foundTask = this.props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})
+            return this.setState({
+                title: foundTask ? foundTask.title : '',
+                priority: foundTask ? foundTask.priority : '',
+                category: foundTask ? foundTask.category : '',
+                notes: foundTask ? foundTask.notes : '',
+                date: foundTask ? foundTask.date : '',
+                id: foundTask ? foundTask.id : '',
+                editButton: true,
+            })
+          } 
+    }
 
     handleUpdate = (taskObj) => {
         this.props.dispatchUpdate(taskObj);
@@ -71,7 +87,8 @@ function mapStateToProps(state){
 
   function mapDispatchToProps(dispatch){
     return {
-        dispatchUpdate: (task) => {dispatch(updateTask(task))}
+        dispatchUpdate: (task) => {dispatch(updateTask(task))},
+        dispatchTasks: () => dispatch(getTasks())
 }}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TaskViewPage)
