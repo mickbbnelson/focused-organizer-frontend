@@ -21,7 +21,7 @@ class TaskViewContainer extends React.Component {
     }
 
     componentDidUpdate(){
-        if (this.state.title === "") {
+        if (this.state.title === "" && this.props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})) {
             const foundTask = this.props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})
             return this.setState({
                 title: foundTask ? foundTask.title : '',
