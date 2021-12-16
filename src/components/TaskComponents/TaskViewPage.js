@@ -52,7 +52,7 @@ class TaskViewPage extends React.Component {
             <p>Notes: {this.state.notes}</p> 
             {this.state.date ? <p>Date: {this.state.date.split("T")[0]}</p> : null}
             </div>
-            <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} task={this.state} handleUpdate={this.handleUpdate} switchButton={this.switchButton} />} />
+            <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} {...this.state} handleUpdate={this.handleUpdate} switchButton={this.switchButton} />} />
             {this.state.editButton ? <Link to={viewLink} >
             <button onClick={this.switchButton}>Edit</button>
             </Link> : null}
