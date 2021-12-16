@@ -5,18 +5,14 @@ import { Route, Link } from 'react-router-dom';
 import { updateTask, getTasks } from '../../actions/TaskActions'
 
 class TaskViewPage extends React.Component {
-    constructor(props){
-    super(props)
-    const foundTask = props.tasks.find(task => {return task.id === parseInt(this.props.routerProps.match.params.id)})
-    this.state = {
-        title: foundTask ? foundTask.title : '',
-        priority: foundTask ? foundTask.priority : '',
-        category: foundTask ? foundTask.category : '',
-        notes: foundTask ? foundTask.notes : '',
-        date: foundTask ? foundTask.date : '',
-        id: foundTask ? foundTask.id : '',
-        editButton: true,
-    }
+    state = {
+        title: '',
+        priority: '',
+        category: '',
+        notes: '',
+        date: '',
+        id: '',
+        editButton: true,  
     }
 
     componentDidMount(){
