@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import EditTaskForm from "../components/TaskViewComponents/EditTaskForm"
 import { Route, Link } from 'react-router-dom';
 import { updateTask, getTasks } from '../actions/TaskActions'
+import TaskViewDisplay from '../components/TaskViewComponents/TaskViewDisplay'
 
 class TaskViewContainer extends React.Component {
     state = {
@@ -57,13 +58,7 @@ class TaskViewContainer extends React.Component {
         const viewLink = `/tasks/${this.state.id}/edit`
         return (
             <div id="view-card">
-            <div className="center">
-            <h1 className="center">{this.state.title}</h1> 
-            <p>Priority: {this.state.priority}</p> 
-            <p>Category: {this.state.category}</p> 
-            <p>Notes: {this.state.notes}</p> 
-            {this.state.date ? <p>Date: {this.state.date.split("T")[0]}</p> : null}
-            </div>
+            <TaskViewDisplay {...this.state} />
             <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} {...this.state} handleUpdate={this.handleUpdate} switchButton={this.switchButton} />} />
             {this.state.editButton ? <Link to={viewLink} >
             <button onClick={this.switchButton}>Edit</button>
