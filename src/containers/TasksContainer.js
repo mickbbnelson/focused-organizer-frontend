@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {connect} from "react-redux"
 import {getTasks, deleteTask, addTask} from '../actions/TaskActions'
 import TaskForm from '../components/TaskComponents/TaskForm'

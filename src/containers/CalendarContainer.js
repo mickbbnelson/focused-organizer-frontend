@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
 import CalendarPage from '../components/CalendarComponents/CalendarPage'

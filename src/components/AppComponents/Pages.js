@@ -1,6 +1,6 @@
-import { Switch, Route } from 'react-router-dom';
-import TasksContainer from '../../containers/TasksContainer';
-import CalendarContainer from '../../containers/CalendarContainer';
+import { Switch, Route } from 'react-router-dom'
+import TasksContainer from '../../containers/TasksContainer'
+import CalendarContainer from '../../containers/CalendarContainer'
 import About from './About'
 import TaskViewContainer from '../../containers/TaskViewContainer'
 

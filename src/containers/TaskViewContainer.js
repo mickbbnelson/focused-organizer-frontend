@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 import { connect } from "react-redux"
 import EditTaskForm from "../components/TaskViewComponents/EditTaskForm"
-import { Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom'
 import { updateTask, getTasks } from '../actions/TaskActions'
 import TaskViewDisplay from '../components/TaskViewComponents/TaskViewDisplay'
 
