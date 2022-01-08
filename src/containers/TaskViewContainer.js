@@ -70,7 +70,6 @@ class TaskViewContainer extends React.Component {
 }
 
 function mapStateToProps(state){
-    console.log(state)
     return {
       tasks: state
     }

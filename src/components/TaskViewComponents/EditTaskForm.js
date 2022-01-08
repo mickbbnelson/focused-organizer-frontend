@@ -24,7 +24,6 @@ class EditTaskForm extends React.Component {
     } 
 
     render(){
-        console.log(this.props)
         return (
         <div className="center">
         <h1 className="center">Edit Task</h1>
