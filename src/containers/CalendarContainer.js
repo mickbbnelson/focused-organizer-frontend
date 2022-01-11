@@ -2,8 +2,13 @@ import React from "react"
 import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
 import CalendarPage from '../components/CalendarComponents/CalendarPage'
+import CalendarChange from '../components/CalendarComponents/CalendarChange'
 
 class CalendarContainer extends React.Component {
+
+  state = {
+    view: ''
+  }
 
   componentDidMount(){
     this.props.dispatchTasks()
@@ -13,10 +18,14 @@ class CalendarContainer extends React.Component {
       let eventArray = this.props.tasks.map((task) => {
         return {title: task.title, date: task.date}
       }) 
-      return (     
-       <CalendarPage tasks={eventArray} />)
+      if (this.state.view === '' || 'week') {
+      return ( 
+       <> 
+       <CalendarChange />   
+       <CalendarPage tasks={eventArray} />
+       </>)
   }
-}
+}}
 
 function mapDispatchToProps(dispatch){
   return {
