@@ -52,7 +52,7 @@ class TaskForm extends React.Component {
             <label htmlFor="notes-input"> Notes:</label>
             <input type="text" name="notes" id="notes-input" onChange={this.handleChange} value={this.state.notes} />
             
-            <input type="submit" value="Add Task"/>
+            <input type="submit" value="Add Task" class="button"/>
             
             <h3>Optional date info</h3>
             

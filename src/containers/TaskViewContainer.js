@@ -61,9 +61,9 @@ class TaskViewContainer extends React.Component {
             <TaskViewDisplay {...this.state} />
             <Route path="/tasks/:id/edit" component={routerProps => <EditTaskForm routerProps={routerProps} {...this.state} handleUpdate={this.handleUpdate} switchButton={this.switchButton} />} />
             {this.state.editButton ? <Link to={viewLink} >
-            <button onClick={this.switchButton}>Edit</button>
+            <button onClick={this.switchButton} class="button">Edit</button>
             </Link> : null}
-            <Link to='/tasks' ><button onClick={this.switchButton}>Return to Tasks</button></Link>
+            <Link to='/tasks' ><button onClick={this.switchButton} class="button">Return to Tasks</button></Link>
             </>  
         )
     }

@@ -51,7 +51,7 @@ class EditTaskForm extends React.Component {
             <label htmlFor="dateinput">Date and time(optional):</label>
             <input type="datetime-local" name="date" id="dateinput" onChange={this.handleChange} value={this.state.date} /> 
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" class="button" />
         </form>
         </div>
         )
