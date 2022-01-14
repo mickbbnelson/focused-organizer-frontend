@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
 import CalendarPage from '../components/CalendarComponents/CalendarPage'
 import CalendarChange from '../components/CalendarComponents/CalendarChange'
+import CalendarMonth from '../components/CalendarComponents/CalendarMonth'
 
 class CalendarContainer extends React.Component {
 
@@ -21,8 +22,9 @@ class CalendarContainer extends React.Component {
       if (this.state.view === '' || 'week') {
       return ( 
        <> 
-       <CalendarChange />   
+       <CalendarChange view={this.state.view}/>   
        <CalendarPage tasks={eventArray} />
+       <CalendarMonth tasks={eventArray}/>
        </>)
   }
 }}

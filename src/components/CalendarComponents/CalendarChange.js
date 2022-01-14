@@ -11,7 +11,7 @@ const CalendarChange = (props) => {
               <label>Calendar View:</label>
               <select type="text" name="category" id="category-input"> 
                 <option value="Week">Week</option>
-                <option value="Home">Home</option>
+                <option value="Month">Month</option>
               </select> 
             </form>
           </div>
