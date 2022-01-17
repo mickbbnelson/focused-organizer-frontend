@@ -14,20 +14,38 @@ class CalendarContainer extends React.Component {
   componentDidMount(){
     this.props.dispatchTasks()
   }
+
+  // calendarFilter(){
+  //   if (this.state.view === "" ||  "Week") {
+  //     return <CalendarPage tasks={eventArray} />
+  //   } else { return <CalendarMonth tasks={eventArray}/>}
+  // }
+
   
     render() {
       let eventArray = this.props.tasks.map((task) => {
         return {title: task.title, date: task.date}
-      }) 
-      if (this.state.view === '' || 'week') {
-      return ( 
-       <> 
-       <CalendarChange view={this.state.view}/>   
-       <CalendarPage tasks={eventArray} />
-       <CalendarMonth tasks={eventArray}/>
-       </>)
-  }
-}}
+      })
+
+      let calendarFilter = () => {
+        if (this.state.view === "" ||  "Week") {
+          return <CalendarPage tasks={eventArray} />
+        } else { return <CalendarMonth tasks={eventArray}/>}
+      }
+
+      return (
+      <div>
+      <div> 
+      <CalendarChange view={this.state.view}/>
+      </div>
+      
+      <div>
+        {calendarFilter()}
+      </div>
+      
+      </div>)
+
+  }}
 
 function mapDispatchToProps(dispatch){
   return {
