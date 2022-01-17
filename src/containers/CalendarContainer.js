@@ -8,35 +8,36 @@ import CalendarMonth from '../components/CalendarComponents/CalendarMonth'
 class CalendarContainer extends React.Component {
 
   state = {
-    view: ''
+    calendarView: ''
   }
 
   componentDidMount(){
     this.props.dispatchTasks()
   }
 
-  // calendarFilter(){
-  //   if (this.state.view === "" ||  "Week") {
-  //     return <CalendarPage tasks={eventArray} />
-  //   } else { return <CalendarMonth tasks={eventArray}/>}
-  // }
-
+  viewCalendar = (view) => {
+    console.log(view)
+    this.setState({
+    calendarView: view.toString()
+    })
+  } 
   
     render() {
+      console.log(this.state.calendarView)
       let eventArray = this.props.tasks.map((task) => {
         return {title: task.title, date: task.date}
       })
 
       let calendarFilter = () => {
-        if (this.state.view === "" ||  "Week") {
+        if (this.state.calendarView === "") {
           return <CalendarPage tasks={eventArray} />
-        } else { return <CalendarMonth tasks={eventArray}/>}
+        } else { return <CalendarMonth tasks={eventArray} />}
       }
 
       return (
       <div>
       <div> 
-      <CalendarChange view={this.state.view}/>
+      <CalendarChange view={this.state.view} viewCalendar={this.viewCalendar} />
       </div>
       
       <div>
