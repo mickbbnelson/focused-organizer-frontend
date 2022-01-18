@@ -2,7 +2,7 @@ const CalendarChange = (props) => {
   
     const calendarUpdate = (event) => {
       event.preventDefault();
-      props.viewCalendar(event.target.value);
+      props.updateCalendar(event.target.value);
     } 
       
         return (

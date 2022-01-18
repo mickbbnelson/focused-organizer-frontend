@@ -2,7 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {getTasks} from '../actions/TaskActions'
 import CalendarPage from '../components/CalendarComponents/CalendarPage'
-import CalendarChange from '../components/CalendarComponents/CalendarChange'
+import CalendarChange from '../components/CalendarComponents/CalendarDropdown'
 import CalendarMonth from '../components/CalendarComponents/CalendarMonth'
 
 class CalendarContainer extends React.Component {
@@ -15,15 +15,13 @@ class CalendarContainer extends React.Component {
     this.props.dispatchTasks()
   }
 
-  viewCalendar = (view) => {
-    console.log(view)
+  updateCalendar = (view) => {
     this.setState({
     calendarView: view.toString()
     })
   } 
   
     render() {
-      console.log(this.state.calendarView)
       let eventArray = this.props.tasks.map((task) => {
         return {title: task.title, date: task.date}
       })
@@ -37,7 +35,7 @@ class CalendarContainer extends React.Component {
       return (
       <div>
       <div> 
-      <CalendarChange view={this.state.view} viewCalendar={this.viewCalendar} />
+      <CalendarChange view={this.state.view} updateCalendar={this.updateCalendar} />
       </div>
       
       <div>
