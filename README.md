@@ -21,7 +21,7 @@ In order to install correctly, you must install the backend first please follow 
 ## Features
 
 -Manage tasks in an organized list.  From here, you can create, update, delete and filter tasks from the prioritized list.
-![List Image](https://imgur.com/a/TVLj1hy)
+![List Image](https://i.postimg.cc/XYvcdJS7/Readme-Image-1.jpg)
 
 ## Technologies Used
 
