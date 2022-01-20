@@ -18,9 +18,14 @@ In order to install correctly, you must install the backend first please follow 
 
 -In the frontend directory type "yarn start" to open the application in the browser
 
+## Features
+
+-Manage tasks in an organized list.  From here, you can create, update, delete and filter tasks from the prioritized list.
+![List Image](https://imgur.com/a/TVLj1hy)
+
 ## Technologies Used
 
--JavaScript ES6, React, Redux, React-Redux, React-Router, Thunk middleware, HTML, CSS
+-JavaScript ES6, React, Redux, React-Redux, React-Router, Thunk middleware, HTML, CSS, FullCalendar
 
 ## Contact:
 
