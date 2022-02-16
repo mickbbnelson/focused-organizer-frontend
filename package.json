@@ -2,6 +2,9 @@
   "name": "focused_organizer_frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+  "node": "12.x"
+  },
   "dependencies": {
     "16": "^0.0.2",
     "@fullcalendar/core": "^5.10.1",
