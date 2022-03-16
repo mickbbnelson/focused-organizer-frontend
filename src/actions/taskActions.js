@@ -1,5 +1,5 @@
 import {GET_TASKS, ADD_TASK, DELETE_TASK, UPDATE_TASK} from '../constants'
-const BASE_URL = "http://localhost:3000/tasks/"
+const BASE_URL = "https://focused-organizer-backend.herokuapp.com/"
 
 export const getTasks = () => {
     return (dispatch) => {   
